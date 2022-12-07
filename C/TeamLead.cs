@@ -10,6 +10,11 @@ internal class TeamLead : Programmer
         this.programmers = programmers;
     }
 
+    /// <summary>
+    /// ≈сли написанное программистом число строк кода кратно идентификаторам нескольких тимлидов, 
+    /// то его успевает "хантить" последний тимлид.
+    /// </summary>
+
     public void HuntProgrammers(List<TeamLead> teamLeads)
     {
         int j = 0;
@@ -24,6 +29,7 @@ internal class TeamLead : Programmer
                     {
                         programmers.Add(teamLeads[j].programmers[i]);
                         teamLeads[j].programmers.Remove(teamLeads[j].programmers[i]);
+                        i--; // ??
                     }
                     i++;
                 }

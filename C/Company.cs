@@ -6,7 +6,7 @@ internal class Company
     private List<TeamLead> teamLeads;
     public Company(int teamLeadsAmount, int[] programmersAmount)
     {
-        teamLeads = new List<TeamLead>(teamLeadsAmount);
+        teamLeads = new List<TeamLead>();
         for (int i = 0; i < teamLeadsAmount; i++)
         {
             List<Programmer> programmers = new List<Programmer>();
